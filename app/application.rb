@@ -6,9 +6,12 @@ class Application
     
     if req.path.include?("/items/")
       item = req.path[7..-1]
-      if Item.all.include?
-      resp.write "Item not found"
-      resp.status = 400 
+      if Item.all.include?(item)
+        
+      else 
+        resp.write "Item not found"
+        resp.status = 400
+      end 
     else
       resp.write "Route not found"
       resp.status = 404
