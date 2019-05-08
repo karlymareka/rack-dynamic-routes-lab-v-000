@@ -9,7 +9,8 @@ class Application
       item = req.path[7..-1]
       item_names = Item.all.collect {|item| item.name}
       if item_names.include?(item)
-        Item.all.find {|item| item.price} 
+        Item.all.find {|item| item.price}
+        binding.pry 
       else 
         resp.write "Item not found"
         resp.status = 400
