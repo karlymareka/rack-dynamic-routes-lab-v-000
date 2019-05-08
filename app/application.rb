@@ -23,4 +23,4 @@ class Application
   
 end 
 # Get substring past index three through end of string.
-last_part = value[3..-1]
+#last_part = value[3..-1]
