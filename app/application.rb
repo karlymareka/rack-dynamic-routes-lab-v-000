@@ -4,7 +4,7 @@ class Application
     resp = Rack::Response.new
     req = Rack::Request.new(env)
     
-    if req.path.includes?("/items/")
+    if req.path.include?("/items/")
     else
       404
     end 
