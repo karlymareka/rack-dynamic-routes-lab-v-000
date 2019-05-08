@@ -7,7 +7,8 @@ class Application
     
     if req.path.include?("/items/")
       item = req.path[7..-1]
-      binding.pry 
+      binding.pry
+      item_names = Item.all.
       if Item.all.include?(item)
         
       else 
