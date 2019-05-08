@@ -6,7 +6,8 @@ class Application
     
     if req.path.includes?("/items/")
     else
-      
+      404
+    end 
   end 
   
 end 
