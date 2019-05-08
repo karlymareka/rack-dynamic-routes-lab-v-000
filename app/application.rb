@@ -10,7 +10,7 @@ class Application
       binding.pry
       item_names = Item.all.collect {|item| item.name}
       if item_names.include?(item)
-        
+        binding.pry 
       else 
         resp.write "Item not found"
         resp.status = 400
