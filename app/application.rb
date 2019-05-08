@@ -6,9 +6,9 @@ class Application
     req = Rack::Request.new(env)
     
     if req.path.include?("/items/")
-      item = req.path[7..-1]
+      search_item = req.path[7..-1]
       item_names = Item.all.collect {|item| item.name}
-      if item_names.include?(item)
+      if item_names.include?(search_item)
         Item.all.find {|item| item.price}
         binding.pry 
       else 
