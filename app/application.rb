@@ -5,6 +5,8 @@ class Application
     req = Rack::Request.new(env)
     
     if req.path.include?("/items/")
+      resp.write "Error"
+      resp.status = 400 
     else
       resp.write "Route not found"
       resp.status = 404
