@@ -9,8 +9,8 @@ class Application
       search_item = req.path[7..-1]
       item_names = Item.all.collect {|item| item.name}
       if item_names.include?(search_item)
-        Item.all.find {|item| item.name == search_item}
-        binding.pry 
+        found_item = Item.all.find {|item| item.name == search_item}
+        found_item.price  
       else 
         resp.write "Item not found"
         resp.status = 400
