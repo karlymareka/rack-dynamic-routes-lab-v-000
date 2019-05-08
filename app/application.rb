@@ -10,7 +10,8 @@ class Application
       item_names = Item.all.collect {|item| item.name}
       if item_names.include?(search_item)
         found_item = Item.all.find {|item| item.name == search_item}
-        found_item.price  
+        found_item.price
+        binding.pry 
       else 
         resp.write "Item not found"
         resp.status = 400
