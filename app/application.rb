@@ -9,7 +9,7 @@ class Application
       item = req.path[7..-1]
       binding.pry
       item_names = Item.all.collect {|item| item.name}
-      if Item.all.include?(item)
+      if item_names.include?(item)
         
       else 
         resp.write "Item not found"
